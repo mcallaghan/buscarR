@@ -42,5 +42,7 @@ docs <- sample(
   docs, prob=weights, replace=F
 )
 df <- data.frame(relevant=docs)
+df$seen <- 0
+df$seen[1:20000] <- 1
 recall_df <- recall_frontier(df)
 }

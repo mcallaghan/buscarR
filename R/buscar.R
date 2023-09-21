@@ -47,6 +47,8 @@ k_h0 <- function(r_al, r_seen, recall_target){
 #'   docs, prob=weights, replace=F
 #' )
 #' df <- data.frame(relevant=docs)
+#' df$seen <- 0
+#' df$seen[1:1000] <- 1
 #' calculate_h0(df)
 calculate_h0 <- function(
     df, recall_target=0.95, bias=1, seen_docs=NULL
@@ -119,9 +121,11 @@ calculate_h0 <- function(
 #'   docs, prob=weights, replace=F
 #' )
 #' df <- data.frame(relevant=docs)
+#' df$seen <- 0
+#' df$seen[1:20000] <- 1
 #' recall_df <- recall_frontier(df)
 recall_frontier <- function(df, bias=1) {
-  recall_targets <- seq(0.5,0.99,0.005)
+  recall_targets <- seq(0.01,0.99,0.005)
   p <- sapply(recall_targets, calculate_h0, df=df)
   recall_df <- data.frame(target=recall_targets, p=p)
   plot_recall_df <- recall_df[recall_df$p>0.001,]
@@ -164,6 +168,8 @@ recall_frontier <- function(df, bias=1) {
 #'   docs, prob=weights, replace=F
 #' )
 #' df <- data.frame(relevant=docs)
+#' df$seen <- 0
+#' df$seen[1:30000] <- 1
 #' h0_df <- retrospective_h0(df)
 retrospective_h0 <- function(df, recall_target=0.95, bias=1, batch_size=1000, plot=TRUE) {
   n_seen <- nrow(df[df$seen==1,])

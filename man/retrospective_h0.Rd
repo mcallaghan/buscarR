@@ -56,5 +56,7 @@ docs <- sample(
   docs, prob=weights, replace=F
 )
 df <- data.frame(relevant=docs)
+df$seen <- 0
+df$seen[1:30000] <- 1
 h0_df <- retrospective_h0(df)
 }

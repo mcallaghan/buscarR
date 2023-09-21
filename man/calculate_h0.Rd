@@ -46,5 +46,7 @@ docs <- sample(
   docs, prob=weights, replace=F
 )
 df <- data.frame(relevant=docs)
+df$seen <- 0
+df$seen[1:1000] <- 1
 calculate_h0(df)
 }
