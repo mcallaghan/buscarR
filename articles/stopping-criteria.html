@@ -212,19 +212,22 @@ for several different recall targets, helping to inform and
 transparently communicate our decision about the safety of stopping
 screening at any given point.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">recall_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/recall_frontier.html">recall_frontier</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">recall_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/recall_frontier.html">recall_frontier</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in phyper(k_vec, k_hat_vec, red_ball_vec, n_vec): NaNs produced</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in phyper(k_vec, k_hat_vec, red_ball_vec, n_vec): NaNs produced</span></span></code></pre></div>
 <p><img src="stopping-criteria_files/figure-html/recall_frontier-1.png" width="100%"></p>
 <p>This also returns a dataframe with the p score at different recall
 targets</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">recall_df</span><span class="op">)</span></span>
-<span><span class="co">#&gt;   target            p</span></span>
-<span><span class="co">#&gt; 1  0.500 4.476570e-70</span></span>
-<span><span class="co">#&gt; 2  0.505 2.580689e-68</span></span>
-<span><span class="co">#&gt; 3  0.510 1.474262e-66</span></span>
-<span><span class="co">#&gt; 4  0.515 5.962439e-65</span></span>
-<span><span class="co">#&gt; 5  0.520 3.344295e-63</span></span>
-<span><span class="co">#&gt; 6  0.525 1.329260e-61</span></span></code></pre></div>
+<span><span class="co">#&gt;   target p</span></span>
+<span><span class="co">#&gt; 1  0.010 0</span></span>
+<span><span class="co">#&gt; 2  0.015 0</span></span>
+<span><span class="co">#&gt; 3  0.020 0</span></span>
+<span><span class="co">#&gt; 4  0.025 0</span></span>
+<span><span class="co">#&gt; 5  0.030 0</span></span>
+<span><span class="co">#&gt; 6  0.035 0</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="retrospective-stopping-criteria">Retrospective stopping criteria<a class="anchor" aria-label="anchor" href="#retrospective-stopping-criteria"></a>

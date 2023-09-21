@@ -118,8 +118,10 @@ at number of screened documents in column `seen`</p>
 <span class="r-in"><span>  <span class="va">docs</span>, prob<span class="op">=</span><span class="va">weights</span>, replace<span class="op">=</span><span class="cn">F</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>relevant<span class="op">=</span><span class="va">docs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">df</span><span class="op">$</span><span class="va">seen</span> <span class="op">&lt;-</span> <span class="fl">0</span></span></span>
+<span class="r-in"><span><span class="va">df</span><span class="op">$</span><span class="va">seen</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">30000</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">1</span></span></span>
 <span class="r-in"><span><span class="va">h0_df</span> <span class="op">&lt;-</span> <span class="fu">retrospective_h0</span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in seq.default(batch_size, n_seen, batch_size):</span> 'to' must be of length 1</span>
+<span class="r-plt img"><img src="retrospective_h0-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
