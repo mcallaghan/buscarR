@@ -1,6 +1,6 @@
 Package: buscarR
 Type: Package
-Title: Calculates reliable stopping criteria for users of machine-learning prioritised screening in systematic reviews
+Title: Calculate reliable stopping criteria for users of machine-learning prioritised screening in systematic reviews
 Version: 0.1.0
 Author: Max Callaghan
 Maintainer: Max Callaghan <callaghan@mcc-berlin.net>
