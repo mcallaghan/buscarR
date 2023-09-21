@@ -1,0 +1,23 @@
+Package: buscarR
+Type: Package
+Title: Calculates reliable stopping criteria for users of machine-learning prioritised screening in systematic reviews
+Version: 0.1.0
+Author: Max Callaghan
+Maintainer: Max Callaghan <callaghan@mcc-berlin.net>
+Description: When we do machine learning-prioritised screening in a systematic review, we 
+  can only save work if we have a method for deciding when to stop. 
+  buscarR offers an implementation of the stopping criteria we suggested in 
+  Callaghan, Max, and Finn Müller-Hansen. 2020. 
+  Statistical Stopping Criteria for Automated Screening 
+  in Systematic Reviews. Systematic Reviews, September. 
+  https://doi.org/10.21203/rs.2.18218/v2.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    BiasedUrn
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.2.2

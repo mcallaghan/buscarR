@@ -1,0 +1,15 @@
+citHeader("To cite buscarR in publications use:")
+
+citEntry(
+  entry    = "Article",
+  title    = "Statistical Stopping Criteria for Automated Screening in Systematic Reviews",
+  author   = personList(as.person("Max Callaghan")),
+  journal  = "Systematic Reviews",
+  year     = "2020",
+  volume   = "9",
+  number   = "273",
+  url      = "https://systematicreviewsjournal.biomedcentral.com/articles/10.1186/s13643-020-01521-4",
+  textVersion = paste(
+    "Callaghan, M.W., Müller-Hansen, F. Statistical stopping criteria for automated screening in systematic reviews. Syst Rev 9, 273 (2020). https://doi.org/10.1186/s13643-020-01521-4"
+  )
+)
