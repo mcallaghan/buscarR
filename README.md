@@ -6,6 +6,7 @@ Assisted Review in R, is a package implementing the stopping criteria
 described in Callaghan, Max, and Finn Müller-Hansen. 2020. “Statistical
 Stopping Criteria for Automated Screening in Systematic Reviews.”
 Systematic Reviews, September. <https://doi.org/10.21203/rs.2.18218/v2>.
+A python package is available [here](https://buscarpy.readthedocs.io/en/latest/).
 
 The stopping criteria offers a *reliable* method to decide when to stop
 screening during machine learning-prioritised screening for a systematic
